@@ -1845,6 +1845,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
             if (media != null) {
                 config.originalPath = media.getPath();
                 media.setCutPath(cutPath);
+                media.setOrientation(MediaUtils.getImageOrientationForUrl(this,cutPath));
                 media.setChooseModel(config.chooseMode);
                 boolean isCutPathEmpty = !TextUtils.isEmpty(cutPath);
                 if (SdkVersionUtils.checkedAndroid_Q()
@@ -1867,6 +1868,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
                 if (media != null) {
                     config.originalPath = media.getPath();
                     media.setCutPath(cutPath);
+                    media.setOrientation(MediaUtils.getImageOrientationForUrl(this,cutPath));
                     media.setChooseModel(config.chooseMode);
                     boolean isCutPathEmpty = !TextUtils.isEmpty(cutPath);
                     if (SdkVersionUtils.checkedAndroid_Q()
