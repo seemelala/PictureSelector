@@ -1920,6 +1920,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
                 media.setPath(c.getPath());
                 media.setMimeType(c.getMimeType());
                 media.setCutPath(c.getCutPath());
+                media.setOrientation(MediaUtils.getImageOrientationForUrl(this,cutPath));
                 media.setWidth(c.getImageWidth());
                 media.setHeight(c.getImageHeight());
                 media.setAndroidQToPath(isAndroidQ ? c.getCutPath() : media.getAndroidQToPath());
@@ -1936,6 +1937,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
                 media.setCut(!TextUtils.isEmpty(c.getCutPath()));
                 media.setPath(c.getPath());
                 media.setCutPath(c.getCutPath());
+                media.setOrientation(MediaUtils.getImageOrientationForUrl(this,cutPath));
                 media.setMimeType(c.getMimeType());
                 media.setWidth(c.getImageWidth());
                 media.setHeight(c.getImageHeight());
